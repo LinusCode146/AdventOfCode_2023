@@ -18,6 +18,6 @@ def find_numbers():
     return total_sum
 
 
-solution = find_numbers()
+solution = find_numbers()  # 54634
 
 
