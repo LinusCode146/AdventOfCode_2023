@@ -4,21 +4,20 @@ file = read_text_file('input.txt')
 
 
 def find_numbers():
-    numbers = []
+    total_sum = 0
     for line in file:
+        line = line[0]
         first = None
-        second = None
-        for elem in line[0]:
-            if elem in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']:
-                first = elem
-                break
-        for elem in line[0][::-1]:
-            if elem in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']:
-                second = elem
-                break
-        numbers.append(first + second)
-    return numbers
+        last = None
+        for char in line:
+            if char.isdigit():
+                last = char
+                if first is None:
+                    first = char
+        total_sum += int(first + last)
+    return total_sum
 
 
-solution = sum([int(i) for i in find_numbers()])
+solution = find_numbers()
+
 
