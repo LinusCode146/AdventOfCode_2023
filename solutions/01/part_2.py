@@ -9,8 +9,8 @@ def find_numbers():
         first_digit = None
         second_digit = None
 
-        for i in range(len(line[0])):
-            current_string = string_to_number(line[0][0:i + 1])
+        for i in range(len(line)):
+            current_string = string_to_number(line[0:i+1])
             for elem in current_string:
                 if elem.isdigit():
                     first_digit = elem
@@ -20,8 +20,8 @@ def find_numbers():
             else:
                 continue
 
-        for i in range(len(line[0])):
-            current_string = string_to_number(line[0][-1 - i:])
+        for i in range(len(line)):
+            current_string = string_to_number(line[-1-i:])
             for elem in current_string:
                 if elem.isdigit():
                     second_digit = elem
@@ -30,7 +30,6 @@ def find_numbers():
                 break
             else:
                 continue
-
         total_sum += int(first_digit + second_digit)
     return total_sum
 
