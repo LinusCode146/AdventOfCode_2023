@@ -1,9 +1,6 @@
 from utils import read_text_file
 
 
-file = read_text_file('input.txt')
-
-
 def find_numbers():
     score = 0
     for line in file:
@@ -12,4 +9,6 @@ def find_numbers():
     return score
 
 
-solution = find_numbers()  # 54634
+if __name__ == '__main__':
+    file = read_text_file()
+    solution = find_numbers()  # 54634

@@ -1,7 +1,5 @@
 from utils import read_text_file, string_to_number
 
-file = read_text_file('input.txt')
-
 
 def find_numbers():
     total_sum = 0
@@ -34,4 +32,6 @@ def find_numbers():
     return total_sum
 
 
-solution = find_numbers()  # 53855
+if __name__ == '__main__':
+    file = read_text_file()
+    solution = find_numbers()  # 53855
