@@ -2,7 +2,7 @@ from utils import read_text_file, edge_values
 from typing import Tuple, List
 
 
-def find_parts() -> int:
+def find_parts(file) -> int:
     score = []
     current_numbers: List[Tuple[int, int]] = []
     for index, line in enumerate(file):
@@ -25,5 +25,5 @@ def find_parts() -> int:
 
 
 if __name__ == '__main__':
-    file = read_text_file()
-    solution = find_parts()  # 528799
+    doc = read_text_file()
+    solution = find_parts(doc)  # 528799

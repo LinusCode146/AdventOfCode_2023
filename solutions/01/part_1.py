@@ -1,7 +1,7 @@
 from utils import read_text_file
 
 
-def find_numbers():
+def find_numbers(file):
     score = 0
     for line in file:
         digits = [char for char in line if char.isdigit()]
@@ -10,5 +10,5 @@ def find_numbers():
 
 
 if __name__ == '__main__':
-    file = read_text_file()
-    solution = find_numbers()  # 54634
+    doc = read_text_file()
+    solution = find_numbers(doc)  # 54634

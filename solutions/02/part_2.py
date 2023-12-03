@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-def validate_balls(total_score=0):
+def validate_balls(file, total_score=0):
     for line in file.split('\n'):
         id_, line = line.split(':')
         current_balls = defaultdict(int)
@@ -18,5 +18,5 @@ def validate_balls(total_score=0):
 
 
 if __name__ == '__main__':
-    file = open('input.txt', 'r').read().strip()
-    solution = validate_balls()  # 55593
+    doc = open('input.txt', 'r').read().strip()
+    solution = validate_balls(doc)  # 55593

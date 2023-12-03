@@ -1,7 +1,7 @@
 from utils import read_text_file, string_to_number
 
 
-def find_numbers():
+def find_numbers(file):
     total_sum = 0
     for line in file:
         first_digit = None
@@ -33,5 +33,5 @@ def find_numbers():
 
 
 if __name__ == '__main__':
-    file = read_text_file()
-    solution = find_numbers()  # 53855
+    doc = read_text_file()
+    solution = find_numbers(doc)  # 53855

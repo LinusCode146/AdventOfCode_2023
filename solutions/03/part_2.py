@@ -2,7 +2,7 @@ from utils import read_text_file, edge_values
 from typing import Tuple, Dict, List
 
 
-def create_part_map() -> int:
+def create_part_map(file) -> int:
     current_parts: Dict[int:Tuple[int, int]] = dict()
     score = []
     current_numbers: List[Tuple[int, int]] = []
@@ -27,7 +27,7 @@ def create_part_map() -> int:
     return current_parts
 
 
-def get_gears_ratios(parts) -> int:
+def get_gears_ratios(file, parts) -> int:
     ratios = []
     current_parts = []
     for index, line in enumerate(file):
@@ -48,5 +48,5 @@ def get_gears_ratios(parts) -> int:
 
 
 if __name__ == '__main__':
-    file = read_text_file()
-    solution = get_gears_ratios(create_part_map())  # 84907174
+    doc = read_text_file()
+    solution = get_gears_ratios(doc, create_part_map(doc))  # 84907174
