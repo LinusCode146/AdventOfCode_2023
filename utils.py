@@ -33,20 +33,5 @@ def string_to_number(string: str) -> str:
 
 def edge_values(grid, x, y):
     """Used to get all the indexes of adjacent values in a 2d grid (also diagonally) Day 3"""
-    adjacent_indexes = []
-    rows = len(grid)
-    cols = len(grid[0])
-
-    # Define offsets for adjacent positions
-    offsets = [
-        (-1, -1), (-1, 0), (-1, 1),
-        (0, -1), (0, 1),
-        (1, -1), (1, 0), (1, 1)
-    ]
-
-    for dx, dy in offsets:
-        new_x, new_y = x + dx, y + dy
-        if 0 <= new_x < rows and 0 <= new_y < cols:
-            adjacent_indexes.append((new_x, new_y))
-
-    return adjacent_indexes
+    offsets = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+    return [(x + dx, y + dy) for dx, dy in offsets if 0 <= x + dx < len(grid[0]) and 0 <= y + dy < len(grid)]
