@@ -2,7 +2,7 @@ from utils import read_text_file, edge_values
 from typing import Tuple, List
 
 
-def get_adjacent_numbers() -> int:
+def find_parts() -> int:
     score = []
     current_numbers: List[Tuple[int, int]] = []
     for index, line in enumerate(file):
@@ -26,4 +26,4 @@ def get_adjacent_numbers() -> int:
 
 if __name__ == '__main__':
     file = read_text_file()
-    solution = get_adjacent_numbers()  # 528799
+    solution = find_parts()  # 528799
