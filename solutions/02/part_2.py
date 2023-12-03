@@ -19,4 +19,4 @@ def validate_balls(total_score=0):
 
 if __name__ == '__main__':
     file = open('input.txt', 'r').read().strip()
-    solution = validate_balls()
+    solution = validate_balls()  # 55593
