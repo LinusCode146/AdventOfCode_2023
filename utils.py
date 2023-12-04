@@ -1,6 +1,5 @@
 import csv
 from typing import List
-from itertools import *
 
 
 def read_text_file(filename='input.txt') -> List[str]:
